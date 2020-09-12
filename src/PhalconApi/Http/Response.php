@@ -4,6 +4,7 @@ namespace PhalconApi\Http;
 
 use PhalconApi\Constants\Services;
 use PhalconApi\Exception;
+use Phalcon\Http\ResponseInterface;
 
 class Response extends \Phalcon\Http\Response
 {
@@ -58,7 +59,7 @@ class Response extends \Phalcon\Http\Response
         $this->setStatusCode($statusCode);
     }
 
-    public function setJsonContent($content, $jsonOptions = 0, $depth = 512)
+    public function setJsonContent($content, int $jsonOptions = 0, int $depth = 512): ResponseInterface
     {
         parent::setJsonContent($content, $jsonOptions, $depth);
 

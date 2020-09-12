@@ -20,7 +20,7 @@ namespace PhalconApi\Mvc;
  * @property \PhalconApi\Data\Query\QueryParsers\UrlQueryParser $urlQueryParser
  */
 
-class Plugin extends \Phalcon\Mvc\User\Plugin
+class Plugin extends \Phalcon\Di\Injectable
 {
 
 }
