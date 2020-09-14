@@ -58,12 +58,4 @@ class Response extends \Phalcon\Http\Response
         $this->setJsonContent(['error' => $error]);
         $this->setStatusCode($statusCode);
     }
-
-    public function setJsonContent($content, int $jsonOptions = 0, int $depth = 512): ResponseInterface
-    {
-        parent::setJsonContent($content, $jsonOptions, $depth);
-
-        $this->setContentType('application/json', 'UTF-8');
-        $this->setHeader('E-Tag', md5($this->getContent()));
-    }
 }
